@@ -1,13 +1,63 @@
 
 [
-    {
-        "id": 1,
-        "name" : "product - 1",
-        "price" : 25
-    },
-    {
-        "id": 2,
-        "name" : "product - 2",
-        "price" : 36
-    }
+  {
+    "id": 1,
+    "name": "Wireless Mouse",
+    "price": 15,
+    "description": "Ergonomic wireless mouse with adjustable DPI and long battery life."
+  },
+  {
+    "id": 2,
+    "name": "Mechanical Keyboard",
+    "price": 45,
+    "description": "RGB backlit mechanical keyboard with blue switches for tactile feedback."
+  },
+  {
+    "id": 3,
+    "name": "Bluetooth Headphones",
+    "price": 60,
+    "description": "Noise-cancelling over-ear headphones with deep bass and 20-hour battery."
+  },
+  {
+    "id": 4,
+    "name": "Smart Watch",
+    "price": 80,
+    "description": "Fitness tracking smartwatch with heart rate monitor and sleep tracking."
+  },
+  {
+    "id": 5,
+    "name": "USB-C Charger",
+    "price": 20,
+    "description": "Fast charging USB-C adapter compatible with smartphones and laptops."
+  },
+  {
+    "id": 6,
+    "name": "Portable SSD 500GB",
+    "price": 75,
+    "description": "High-speed external SSD with compact design and durable build."
+  },
+  {
+    "id": 7,
+    "name": "Gaming Chair",
+    "price": 120,
+    "description": "Comfortable gaming chair with lumbar support and adjustable height."
+  },
+  {
+    "id": 8,
+    "name": "LED Monitor 24 inch",
+    "price": 140,
+    "description": "Full HD LED monitor with slim bezel and vibrant color display."
+  },
+  {
+    "id": 9,
+    "name": "Wireless Earbuds",
+    "price": 35,
+    "description": "Compact earbuds with touch control and crystal-clear sound quality."
+  },
+  {
+    "id": 10,
+    "name": "Laptop Backpack",
+    "price": 25,
+    "description": "Water-resistant backpack with padded compartments for laptop and accessories."
+  }
 ]
