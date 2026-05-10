@@ -2,7 +2,6 @@ import { createServer, IncomingMessage, Server, ServerResponse } from "http";
 import { routes } from "./routes/route";
 
 const server:Server = createServer((req:IncomingMessage, res:ServerResponse)=>{
-    
     routes(req, res)
 });
 
