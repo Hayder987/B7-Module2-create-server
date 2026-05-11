@@ -1,3 +1,4 @@
+import { IProduct } from './../types/product.type';
 import type { IncomingMessage, ServerResponse } from "node:http";
 import { getProduct, insertProduct } from "../services/product.service";
 import type { IProduct } from "../types/product.type";
@@ -38,10 +39,27 @@ export const productController =async (
     }
      product.push(newProduct);
      insertProduct(product);
-     console.log(product)
-    
-
+     
     res.writeHead(200, { "content-type": "application/json" });
     res.end(JSON.stringify({ message: "product create successfully", data: newProduct }));
   }
+  else if(method === "PUT" && id !== null){
+    const body = await perseBody(req);
+    const products = getProduct();
+
+    const index = products.findIndex((item:IProduct)=> item.id === id);
+    if(index < 0){
+     res.writeHead(404, { "content-type": "application/json" });
+    res.end(JSON.stringify({ message: "product Not Found", data: {}})); 
+    return;
+    }
+
+    products[index] = {id:products[index].id, ...body}
+
+    insertProduct(products);
+
+   res.writeHead(200, { "content-type": "application/json" });
+    res.end(JSON.stringify({ message: "product update successfully", data: products[index]}));
+  }
+
 };
