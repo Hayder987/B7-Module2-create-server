@@ -1,10 +1,14 @@
 import fs from "fs";
 import path from "path"
 
-export const getProduct = () =>{
-    const cwd = process.cwd();
+const cwd = process.cwd();
+const filePath = path.join(cwd, "./src/database/db.json")
 
-    const filePath = path.join(cwd, "./src/database/db.json")
+export const getProduct = () =>{
     const readFile = fs.readFileSync(filePath, "utf-8");
     return JSON.parse(readFile);
 };
+
+export const insertProduct = (payload: any)=>{
+  fs.writeFileSync(filePath, JSON.stringify(payload));
+}
